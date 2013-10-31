@@ -563,6 +563,7 @@ function AgendaEventRenderer() {
 					prevIsAllDay = isAllDay;
 					prevColDelta = colDelta;
 					prevMinuteDelta = minuteDelta;
+                    trigger('eventDragMove', eventElement, event, ev, ui, {colDelta: colDelta, minuteDelta: minuteDelta, rowDelta: minuteDelta/snapMinutes});
 				}
 
 				// if out-of-bounds, revert when done, and vice versa.
